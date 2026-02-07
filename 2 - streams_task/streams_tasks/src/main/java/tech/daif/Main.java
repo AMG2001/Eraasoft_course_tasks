@@ -1,5 +1,6 @@
 package tech.daif;
 
+import static tech.daif.service.AdvancedOperationsTasks.*;
 import static tech.daif.service.BasicOperations.*;
 import static tech.daif.service.CollectorsAndGrouping.*;
 import static tech.daif.service.IntermediateOperations.*;
@@ -37,7 +38,11 @@ public class Main {
         filterNonEmptyOptionalValues();
         returnListOfUppercasedWordsStartingWithACharacter();
         // AdvancedOperations.
-
+        sortEmpsBySalaryThenByName();
+        findSecondLargerNumberInList();
+        findDuplicateElementWithinIntegersList();
+        removeNullAndEmptyStringFromList();
+        partitionStudentsToPassAndFail();
     }
 
 
