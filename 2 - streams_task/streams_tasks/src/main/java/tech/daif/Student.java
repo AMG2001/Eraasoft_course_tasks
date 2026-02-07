@@ -25,4 +25,9 @@ public class Student {
     public double getGrade() {
         return grade;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Student[name: %s,department : %s,grade: %.2f",name,department,grade);
+    }
 }

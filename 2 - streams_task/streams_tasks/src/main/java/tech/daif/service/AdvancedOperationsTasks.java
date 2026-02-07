@@ -39,23 +39,23 @@ public class AdvancedOperationsTasks {
                 .getNumbersList()
                 .stream()
                 .collect(Collectors.groupingBy(Integer::valueOf));
-        map.forEach((key,value) ->{
-            if(value.size() > 1){
+        map.forEach((key, value) -> {
+            if (value.size() > 1) {
                 System.out.println(key);
             }
         });
     }
 
-    public static void removeNullAndEmptyStringFromList() {
-    DataSource
-            .getNamesList()
-            .removeIf(name -> name == null || name.isEmpty());
+    public static List<String> removeNullAndEmptyStringFromList() {
+        List<String> names = DataSource.getNamesList().stream().filter(name -> name != null && !name.isEmpty()).toList();
+        return names;
     }
 
     public static void partitionStudentsToPassAndFail() {
-    DataSource.getStudentsList().stream().collect(Collectors.partitioningBy(student -> student.getGrade() > 50)).forEach((bool,students)->{
-        System.out.println("Students with status : "+bool +" are : ");
-        students.forEach(student -> System.out.print(student + ", "));
-    });
+        DataSource.getStudentsList().stream().collect(Collectors.partitioningBy(student -> student.getGrade() > 50)).forEach((bool, students) -> {
+            System.out.println("Students with status " + bool + " are : ");
+            students.forEach(student -> System.out.print(student + ", "));
+            System.out.println();
+        });
     }
 }
