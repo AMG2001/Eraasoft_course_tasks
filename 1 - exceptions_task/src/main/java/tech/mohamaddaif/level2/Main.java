@@ -49,4 +49,14 @@ public class Main {
             System.out.println(e.getMessage());
         }
     }
+
+    public static double calculateToll(VehicleType type) {
+        double value = switch(type){
+            case CAR -> 5.0;
+            case MOTOCYCLE -> 3.0;
+            case BUS -> 10.0;
+            case TRUCK -> 15.0;
+        };
+        System.our.print(""+type + "->" + value);
+    }
 }
