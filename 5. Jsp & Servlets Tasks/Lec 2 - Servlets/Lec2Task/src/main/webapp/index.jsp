@@ -112,7 +112,7 @@
 <div class="container">
     <h2>User Information Form</h2>
 
-    <form action="/Lec2Task/content" method="post">
+    <form action="/content" method="post">
         <div class="form-group">
             <label>Full Name: <span class="required">*</span></label>
             <input type="text" name="fullName" placeholder="Enter your full name" required>
